@@ -34,16 +34,6 @@
             Isotope js Starts
          --------------------------------------------- */
 	$(window).on('load', function() {
-		$('.portfolio-filter ul li').on('click', function() {
-			$('.portfolio-filter ul li').removeClass('active');
-			$(this).addClass('active');
-
-			var data = $(this).attr('data-filter');
-			$workGrid.isotope({
-				filter: data
-			});
-		});
-
 		if (document.getElementById('portfolio')) {
 			var $workGrid = $('.portfolio-grid').isotope({
 				itemSelector: '.all',
@@ -53,7 +43,27 @@
 				}
 			});
 		}
+
+		$('.portfolio-filter ul li').on('click', function () {
+			$('.portfolio-filter ul li').removeClass('active');
+			$(this).addClass('active');
+
+			var data = $(this).attr('data-filter');
+
+			$workGrid.isotope({
+				filter: data
+			});
+
+			// Always hide all descriptions first
+			$('.filter-desc').hide();
+
+			// Only show description if NOT "all"
+			if (data !== "*") {
+				$(data + '.filter-desc').show();
+			}
+		});
 	});
+
 
 	/*----------------------------------------------------*/
 	/* Start Magnific Pop Up

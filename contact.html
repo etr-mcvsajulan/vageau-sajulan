@@ -2,177 +2,217 @@
 <html lang="en">
 
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="icon" href="img/favicon.png" type="image/png">
-	<title>Contact Us</title>
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="vendors/linericon/style.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-	<!-- main css -->
-	<link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<title>Contact Us</title>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="vendors/linericon/style.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<style>
+/* Button loading spinner */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.15em;
+    vertical-align: text-bottom;
+    margin-left: 0.5rem;
+}
+</style>
 </head>
 
 <body>
 
-	<!--================ Start Header Area =================-->
-	<header class="header_area">
-		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav justify-content-end">
-							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-							<li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-							<li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-							<li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
-	</header>
-	<!--================ End Header Area =================-->
+<header class="header_area">
+  <div class="main_menu">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+          <ul class="nav navbar-nav menu_nav justify-content-end">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
 
-    <!--================ Start Banner Area =================-->
-    <section class="banner_area">
-        <div class="banner_inner d-flex align-items-center">
-            <div class="container">
-                <div class="banner_content text-center">
-                    <h2>Contact Us</h2>
-                    <div class="page_link">
-                        <a href="index.html">Home</a>
-                        <a href="contact.html">Contact</a>
-                    </div>
-                </div>
-            </div>
+<section class="banner_area">
+  <div class="banner_inner d-flex align-items-center">
+    <div class="container">
+      <div class="banner_content text-center">
+        <h2>Contact Us</h2>
+        <div class="page_link"><a href="index.html">Home</a> <a href="contact.html">Contact</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact_area section_gap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="contact_info">
+          <div class="info_item">
+            <i class="lnr lnr-home"></i>
+            <h6>Philippines, Manila</h6>
+            <p>Bf Homes Paranaque City</p>
+          </div>
+          <div class="info_item">
+            <i class="lnr lnr-phone-handset"></i>
+            <h6><a href="#">+69 930 960 7609</a></h6>
+            <p>Mon to Fri 9am to 6 pm</p>
+          </div>
+          <div class="info_item">
+            <i class="lnr lnr-envelope"></i>
+            <h6><a href="#">vageausajulan@gmail.com</a></h6>
+            <p>Send your message here!</p>
+          </div>
         </div>
-    </section>
-    <!--================ End Banner Area =================-->
-    
-    <!--================Contact Area =================-->
-    <section class="contact_area section_gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="contact_info">
-                        <div class="info_item">
-                            <i class="lnr lnr-home"></i>
-                            <h6>Philippines, Manila</h6>
-                            <p>Bf Homes Paranaque City</p>
-                        </div>
-                        <div class="info_item">
-                            <i class="lnr lnr-phone-handset"></i>
-                            <h6><a href="#">+69 930 960 7609</a></h6>
-                            <p>Mon to Fri 9am to 6 pm</p>
-                        </div>
-                        <div class="info_item">
-                            <i class="lnr lnr-envelope"></i>
-                            <h6><a href="#">vageausajulan@gmail.com</a></h6>
-                            <p>Send your message here!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-md-12 text-right">
-                            <button type="submit" value="submit" class="primary_btn">
-                                <span>Send Message</span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
+      </div>
+
+      <div class="col-lg-9">
+        <form id="contactForm" class="row contact_form" novalidate>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
             </div>
-            <div id="mapBox" class="mapBox" 
-                data-lat="14.469806" 
-                data-lon="121.040684" 
-                data-zoom="13" 
-                data-info="262 Givenchy Dr, San Antonio, Parañaque, Metro Manila"
-                data-mlat="14.469806"
-                data-mlon="121.040684">
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" required>
             </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <textarea class="form-control" name="message" id="message" rows="5" placeholder="Enter Message" required></textarea>
+            </div>
+          </div>
+          <div class="col-md-12 text-right">
+            <button type="submit" class="primary_btn" id="submitBtn">
+              <span>Send Message</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="mapBox" class="mapBox"
+      data-lat="14.469806"
+      data-lon="121.040684"
+      data-zoom="13"
+      data-info="262 Givenchy Dr, San Antonio, Parañaque, Metro Manila"
+      data-mlat="14.469806"
+      data-mlon="121.040684">
+    </div>
+  </div>
+</section>
+
+<footer class="footer_area">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="footer_top flex-column">
+          <div class="footer_logo">
+            <a href="#"><img src="img/logo.png" alt=""></a>
+            <h4>Follow Me</h4>
+          </div>
+          <div class="footer_social">
+            <a href="https://www.linkedin.com/in/mcvageausajulan" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </div>
         </div>
-    </section>
-    <!--================Contact Area =================-->
-        
-        <!--================Footer Area =================-->
-	<footer class="footer_area">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-12">
-                    <div class="footer_top flex-column">
-                        <div class="footer_logo">
-                            <a href="#">
-                                <img src="img/logo.png" alt="">
-                            </a>
-                            <h4>Follow Me</h4>
-                        </div>
-                        <div class="footer_social">
-                            <a href="https://www.linkedin.com/in/mcvageausajulan" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-linkedin"></i>
-                            </a> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row footer_bottom justify-content-center">
-                <p class="col-lg-8 col-sm-12 footer-text">
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-            </div>
-        </div>
-    </footer>
-    <!--================End Footer Area =================-->
-    
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/stellar.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-    <script src="vendors/isotope/isotope-min.js"></script>
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/mail-script.js"></script>
-    <!--gmaps Js-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-    <script src="js/gmaps.min.js"></script>
-    <script src="js/theme.js"></script>
+      </div>
+    </div>
+    <div class="row footer_bottom justify-content-center">
+      <p class="col-lg-8 col-sm-12 footer-text">
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Template by
+        <a href="https://colorlib.com" target="_blank">Colorlib</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- JS Libraries -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/stellar.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+<script src="vendors/isotope/isotope-min.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/mail-script.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+<script src="js/gmaps.min.js"></script>
+<script src="js/theme.js"></script>
+
+<!-- EmailJS Form Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  emailjs.init("Mld2O9J4CMD6f6aJD"); // Replace with your Public Key
+
+  const form = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  let sending = false;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (sending) return; // prevent double click
+
+    const templateParams = {
+      from_name: document.getElementById('name').value,
+      from_email: document.getElementById('email').value,
+      subject: document.getElementById('subject').value,
+      message: document.getElementById('message').value
+    };
+
+    // Show loading
+    sending = true;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Sending <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>';
+
+    emailjs.send('service_0vg3g2k', 'template_o0t03dn', templateParams)
+      .then(function(response) {
+        alert('Message sent successfully!');
+        form.reset();
+      })
+      .catch(function(error) {
+        alert('Oops... something went wrong. Please try again.');
+        console.error(error);
+      })
+      .finally(function() {
+        sending = false;
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>Send Message</span>';
+      });
+  });
+});
+</script>
+
 </body>
-
 </html>
